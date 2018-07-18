@@ -1,27 +1,54 @@
 \section*{Introduction}
 \begin{singlespace}
 \im
-Lorem ipsum dolor sit amet, blandit in.
-Aliquam tempor quisque pretium conubia sagittis.
-Ultricies ut natoque faucibus duis, eget vestibulum urna, ultricies purus litora dictum recusandae vitae condimentum.
-Orci vestibulum maecenas venenatis eros, urna tellus mollis arcu urna.
-Pharetra lobortis, tortor quam, aenean aliquet, cursus erat fringilla metus tellus, vitae pellentesque dui tellus.
-Justo suspendisse ullamcorper ac consectetuer, sollicitudin augue placerat nec massa, sit sed elit torquent, libero eu libero pellentesque mauris, nunc viverra egestas et adipiscing lectus.
-Mus sed donec augue, lacus vehicula lorem curabitur odio, integer elit pellentesque elit mi, sed cras duis.
-Non proin, id mus, wisi sit, in accumsan egestas dictum vitae luctus vitae.
-Ut mi porta, euismod fringilla placerat proin nullam laoreet, at risus nunc molestie potenti fusce sed.
+Deep learning dominates ML/AI today, though it has come far from its roots
+in neuroscience\cite{hassabis2017neuroscience}.  I recognize its state of
+the art performance and industrial applicability in supervised learning.
+However, it has been criticized for lacking structure and interpretability,
+and thus lacking in sample efficiency in ways that probabilistic models of
+human cognition do not\cite{Lake2016}.  This inefficiency appears severe in
+action-oriented tasks, leading to the controversial but popular claim that
+``deep reinforcement learning does not work yet''\cite{rlblogpost}. I
+believe efficient machine learning of active behaviors should be driven by
+our understanding of how the proactive, ruthlessly frugal human brain
+approximates optimal predictions of incoming signals from the body
+and the outside world, and uses the signals indicating bodily needs to drive
+behavior over time\cite{probmods,Clark2013}.  Predictive coding,
+active inference, and other foundationally probabilistic methods can make
+online inference tractable at the dimensionalities needed to explain human
+performance\cite{Jonas2014,6386025}.
 \end{singlespace}
 
 \begin{singlespace}
-\bi
-Scelerisque nunc varius magna ante.
-Non vivamus mattis dignissim, morbi nam, amet aliquet, et penatibus lacus felis enim nunc, etiam dui nonummy.
-In molestias, magna leo vulputate, eu nunc ut diam tempor ullamcorper sodales, fusce praesent urna sed.
-Optio nec.
-Et potenti pellentesque molestiae adipiscing, quis at massa, vestibulum at neque leo.
-Mauris etiam mi, arcu ante vulputate tempus sollicitudin volutpat.
-Purus donec tincidunt sit amet a, augue pulvinar leo mus vitae in.
-Consectetuer at ac nunc vitae consectetuer, consequat elementum lectus nec, curabitur vestibulum eget.
-Ligula tellus nec.
-Mauris primis sed vulputate, pharetra torquent vivamus fringilla, ante amet accumsan laoreet tristique pulvinar eveniet, proin odio.
+Reinforcement learning, in multilayer perceptrons or otherwise, assumes that
+action should optimize the expectation of a scalar reward, usually in a Markov
+Decision Process described by probability matrices for state transitions and
+observations.  This formulation fails to perform as well on action tasks as
+supervised learning now performs on classification and regression tasks, and
+I hypothesize that this is because it lacks the structured probabilistic
+beliefs about rewards, states, and observations to usefully constrain
+inference.  In contrast, problem formulations such as model predictive
+control have allowed nearly real-time, online optimization of motor
+behaviors since earlier in this decade\cite{6386025}.  The \emph{active inference}
+optimization problem in neuroscience combines the optimization of behavior
+with the posing of approximate Bayesian inference as an optimization
+problem, and has been shown to generate fluent motor movements.  It also
+trades off exploration and exploitation, and performs well even when posed
+in terms of an oversimplified generative model\cite{Cullen2018}.
+\end{singlespace}
+
+\begin{singlespace}
+\im
+In theoretical neuroscience, various RL-based hypotheses have been advanced
+to explain human decision-making and behavior.  Active-inference models and
+the recent formulation of homeostatic reinforcement learning do not leave
+reward as a free parameter\cite{Keratmati2014,Pezzulo2018,Morville2018a}.
+These have been more parsimoniously successful in explaining prominent
+features of human behavior.  Broadly, the brain is hypothesized to serve
+as the organ of \emph{allostasis} by monitoring the body's internal milieu
+and using predictive updating, autonomic control, and outward-facing
+behavior to ensure that supply meets demand as closely as possible at all
+times\cite{Barrett2015,BarrettTheoryOfConstructed2017,Kleckner2017}. I
+propose to model this core process of affect construction as the learning
+and control of a dynamic flow network via active inference.
 \end{singlespace}
