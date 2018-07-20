@@ -5,31 +5,34 @@
 \section*{Research Plan}
 \begin{singlespace}
 \im
-I will begin my work by expanding active inference into a full-blown framework
-for variational Bayesian learning in action tasks similar to the OpenAI
-Gym ``DOOM'' task used by Cullen and colleagues\cite{Cullen2018}.  From
-there, my main work will consist of modeling the ``body budgeting'' problem
-by alternating between computational theorizing using flow networks, and
-psychological/neuroscientific experiments to empirically examine what sort
-of dynamic flow network can account for human visceromotor and interoceptive
-capabilities.  This would be one of the first initiatives to model not only
-a single supply-demand process in the brain, but a theory of allostasis
-completely distinct from homeostatic feedback control\cite{Sterling2012,Sterling2015,Christie2015}.
+I will begin my work by replicating the work of Cullen and colleagues on
+using active inference in the OpenAI Gym environments, such as the ``DOOM''
+task\cite{Cullen2018}, re-engineering active inference in a probabilistic
+programming framework.  From there, my main work will consist of using that
+framework to computationally formulate and test hypotheses of how the
+interoceptive brain performs the ``body budgeting'' required for allostasis.
+Hypotheses at hand include ``mere'' homeostasis, defined as permanent
+interoceptive set-points encoded as ``hyperpriors'' in the brain's model of
+the body\cite{Morville2018a}; dynamic flow networks for physiological
+resources; and brain contributions to integral rein control via hormones\cite{SAUNDERS1998}.  This would be one
+of the first initiatives to model more than just the brain's own energy
+budgeting, but how the brain uses interoception to perform allostatic
+control\cite{Sterling2012,Sterling2015,Christie2015}.
 \end{singlespace}
 
 \begin{singlespace}
 \im
 Beyond just modeling allostasis in the central nervous system, scaling
 up active inference will allow us to specify the goals for robotics and AI
-control tasks as composeable probabilistic programs
-I will begin my work by expanding active inference into a full-blown framework
-for variational Bayesian learning in action tasks similar to the OpenAI
-Gym ``DOOM'' task used by Cullen and colleagues\cite{Cullen2018}.  From
-there, my main work will consist of modeling the ``body budgeting'' problem
-by alternating between computational theorizing using flow networks, and
-psychological/neuroscientific experiments to empirically examine what sort
-of dynamic flow network can account for human visceromotor and interoceptive
-capabilities.
+control tasks as composeable probabilistic programs.  Homeostatic control has
+been attempted in a machine learning agent, but never as a scaled-up way
+of controlling a sizeable task environment\cite{Penny}.  In environments such
+as OpenAI Gym video games, we can endow agents with ``goals'' related to
+``interoceptive'' in-game quantities, such as health points or usable
+resources, as well as externally-directed goals such as reaching an exit
+within the game level.  Encoding these goals as probabilities and optimizing
+them with active inference will allow experimenters to compose goals, thanks
+to probability laws requiring that all such goal-functions be normalized.
 \end{singlespace}
 
 \begin{singlespace}
