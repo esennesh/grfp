@@ -2,53 +2,51 @@
 % LaTeX to actually obey this specification when used across multiple
 % paragraphs. There may be an easy way to fix this.
 
-\section*{Research Plan}
+\subsection*{Research Plan}
 \begin{singlespace}
-\im
-I will begin my work by replicating the work of Cullen and colleagues on
-using active inference in the OpenAI Gym environments, such as the ``DOOM''
-task\cite{Cullen2018}, re-engineering active inference in a probabilistic
-programming framework.  From there, my main work will consist of using that
-framework to computationally formulate and test hypotheses of how the
-interoceptive brain performs the ``body budgeting'' required for allostasis.
-Hypotheses at hand include ``mere'' homeostasis, defined as permanent
-interoceptive set-points encoded as ``hyperpriors'' in the brain's model of
-the body\cite{Morville2018a}; dynamic flow networks for physiological
-resources; and brain contributions to integral rein control via hormones\cite{SAUNDERS1998}.  This would be one
-of the first initiatives to model more than just the internal energetics of
-the brain in isolation, but how the brain uses interoception to achieve
-allostatic control\cite{Sterling2012,Sterling2015,Christie2015}.  Our models
-will also give us the opportunity to test diachronic, behavioral, and
-teleological concepts of allostasis\cite{Corcoran2017}.
+In my research, I can first extend recent models of \emph{active inference} (from
+neuroscience) to handle opponent control signals, as well as environments such as
+the game Frostbite in which deep reinforcement learning continues to underperform
+human learning speeds\cite{Cullen2018,Lake2016}.  Design constraints and agent goals
+can already be specified via probabilistic programs when given a symbolic
+representation of the underlying design
+space\cite{botvinick2012planning,Yeh:2012:SOW:2185520.2185552,Ritchie:2015:CPM:2809654.2766895}.
+A neuroscientifically-grounded model of motivational control will endow agents with
+a human-like \emph{inductive bias}: learn to survive, and explore what you can
+affect right now.  Opponent control could also potentially be used to encode positive
+feedback loops and pure rewards.
 \end{singlespace}
 
 \begin{singlespace}
-\im
-Beyond just modeling allostasis in the central nervous system, scaling
-up active inference will allow us to specify the goals for robotics and AI
-control tasks as composeable probabilistic programs.  Homeostatic control has
-been attempted in a machine learning agent, but not yet as a scaled-up way
-of controlling a sizeable task environment\cite{Penny}.  In environments such
-as OpenAI Gym video games, we can endow agents with ``goals'' related to
-``interoceptive'' in-game quantities, such as health points or usable
-resources, as well as externally-directed goals such as reaching an exit
-within the game level.  Encoding these goals as probabilities and optimizing
-them with active inference will allow experimenters to compose goals by
-forming joint distributions from conditional ones.
+The resulting models of time-varying allostatic set-points can also be checked in
+physiological and neuroimaging studies.  Analyzing simultaneous responses in the
+central and autonomic nervous systems while subjects are challenged can allow us
+to measure the flexibility of mental activity, and we hypothesize this can act as
+a measure of successful opponent control of autonomic systems under time-varying loads.
+These studies will not only provide an opportunity to falsify our current generative
+model of opponent control, but to notice patterns in data which could lead to an
+improved replacement model.
 \end{singlespace}
 
+\section*{Broader Impacts}
 \begin{singlespace}
-\im\bi
-I will be conducting my research as part of the Psychologists, Engineers,
-and Neuroscientists Group (PEN) convened by Lisa Feldman Barrett to model
-the predictive brain and the theory of constructed emotion\cite{Barrett2015,BarrettTheoryOfConstructed2017}.
-As part of this colloboration, I am being co-advised by both Jan-Willem van
-de Meent, an expert in probabilistic programming, and Professor Barrett as
-part of her Interdisciplinary Affective Science Lab.  Since the Lab performs
-both purely investigative and clinical research, I will be able to test my
-models of allostasis and core affect against clinical data, and apply it
-clinically.  Dysfunctional interoceptive inference and visceromotor planning
-are implicated in many of today's most pressing health issues: depression,
-addiction, and obesity can all arise from malfunctions in the brain's core
-allostatic and interoceptive mechanisms that construct affect\cite{Stephan2016}.
+My PhD appointment at Northeastern University is unique in providing me the resources
+to investigate how the brain maintains the body from a computational perspective. My
+primary adviser Jan-Willem van de Meent and co-adviser Lisa Feldman Barrett are founding
+principal investigators of the Psychologists, Engineers, and Neuroscientists (PEN) group, and
+Professor Barrett is the President of the Association for Psychological Science.
+The PEN group aims precisely to bring engineering and computer-science expertise to bear on
+the study of the brain as an organ of
+allostasis\cite{Kleckner2017}.
+Beyond just implementing a neuroscience-inspired AI idea and testing it in an
+environment such as the OpenAI Gym, I have the opportunity to extrapolate from a
+hypothesis about allostasis to predictions about human and animal subjects, and then
+test those predictions against real studies.  That initial implementation of brain-inspired
+AI has been done and tested\cite{Cullen2018,Penny}.  Now, in the PEN group, I believe we
+can advance most efficiently by subjecting computational ideas to rigorous neuroimaging,
+behavioral, and physiological studies.  A clear idea of how the brain coordinates
+allostasis will not only provide fertile soil for AI investigations: dysfunctional
+allostatic processing is implicated in many of today's most pressing health issues.
+Depression, anxiety, addiction, and obesity can all arise from malfunctions in
+the brain's core allostatic mechanisms\cite{Rosen2004,Stephan2016}.
 \end{singlespace}
