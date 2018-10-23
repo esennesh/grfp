@@ -2,38 +2,30 @@
 
 \subsection*{Research Goal}
 \begin{singlespace}
-My research goal for my PhD is to model the opponent control of homeostatic
-set-points in the hypothalamus as interoceptive Bayesian inference. In opponent
-control, the body sends endocrine signals through the hypothalamus to the rest of
-the brain, indicating when a bodily parameter has dropped too low (ie: you are
-hungry), or has risen too high (ie: you feel hot and are sweating).  Either or
-both of these signals can be sent at the same time in most cases, and the job
-falls to the central nervous system to infer what is happening, where the
-bodily parameter needs to be, to enact behaviors seeking out the appropriate
-bodily state.
-
-Existing models of reinforcement learning in AI and predictive coding in
-neuroscience do not account for the brain's need to keep the body alive.
-This is despite the emerging consensus around
-\emph{predictive processing} as the unsupervised learning task underlying
-human intelligence.  Even if we could collapse those homeostatic sensory
-signals into a single number, termed ``reward'', we would have the problem
-that ``deep reinforcement learning does not work yet''\cite{rlblogpost}.  Even
-the more computationally efficient methods for optimizing behavior, such as model
-predictive control, still require the task to be specified as a scalar
-cost\cite{6386025}.  I believe that formalizing the signals from which the brain infers
-and predicts the body's needs can lead to much more efficient and tractable machine
-learning models for active tasks.
+One important role of the brain is to interpret and integrate signals from the outside world (exteroceptive
+information) and from inside the body (interoceptive information) to guide action.  There is
+a growing consensus in neuroscience that instead of asking, ``what is this sensory input?'',
+the brain infers, ``what is this most like?'', and uses similar past experience to dynamically make
+present inputs meaningful \cite{Bar2009,Friston2010,BarrettTheoryOfConstructed2017}.
+In psychology, a \emph{category} is a group of instances sharing a functional similarity
+within a context (e.g., \cite{Grill-Spector2014,Greene2016}).
+Therefore, an understanding of how the brain works requires solving the puzzle of how it categorizes
+present inputs by constructing categories from past experiences, in a specific situation or context.
+What functional purpose or criterion is the brain using to spontaneously construct categories?  An emerging perspective
+in neuroscience suggests the brain primarily anticipates the energy needs of the body and attempts to efficiently
+meet those needs before they arise, a process called \emph{allostasis} \cite{Sterling2012}.
+For additional references, see \cite{sterling2015principles,Kleckner2017}.  The functional similarity that supports dynamic category construction, then, may be grounded in efficient energy regulation of the body \cite{Barrett2015,BarrettTheoryOfConstructed2017}.
 \end{singlespace}
 
 \begin{singlespace}
-The human brain is tasked with monitoring a variety of feedback signals, from
-blood-sugar concentration to core body temperature.  The state of these
-variables in the moment can be called a \emph{homeostatic} state, and
-keeping the homeostatic state constant is called homeostasis.  We now know,
-however, that the brain accomplishes a harder task: \emph{allostasis}, steering
-internal variables and modulating rewards over time, according to the physiological
-needs of the moment\cite{Sterling2012,Kleckner2017}.  This may be accomplished by the cooperation
-of the predictive brain with opponent control signals from the body whose
-intensity and thresholds in the parameter space vary as bodily needs do\cite{Morville2018a}.
+To test this hypothesis, I will use hierarchical Bayesian topic modeling to study an established phenomenon in psychology called \emph{emotional granularity}, which
+\cite{Kashdan2015} has been described as a brain-based category construction problem \cite{BarrettTheoryOfConstructed2017}.  The brain categorizes interoceptive and exteroceptive
+signals into bread categories, such as ``pleasantness'' and ``unpleasantness'', which do not
+guide the physical systems of the body in a precise way, or into narrower ones, such as
+``irritation'' or ``despondence'' which allow for more precise action planning.  Individuals
+with greater emotional granularity tend to achieve greater educational and professional
+success, enjoy better physical and mental health, and recover from illness more quickly (e.g., \cite{hoyt2013cancer,Kashdan2015}; for an extended discussion,
+see \cite{barrett2017emotions}).  In my PhD, I will study how to improve the measurement
+of emotional granularity using hierarchical topic models, applied to existing and forthcoming data sets,
+and by integrating autonomic nervous system endpoint measurements into those models.
 \end{singlespace}

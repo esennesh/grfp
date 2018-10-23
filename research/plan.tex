@@ -4,49 +4,60 @@
 
 \subsection*{Research Plan}
 \begin{singlespace}
-In my research, I can first extend recent models of \emph{active inference} (from
-neuroscience) to handle opponent control signals, as well as environments such as
-the game Frostbite in which deep reinforcement learning continues to underperform
-human learning speeds\cite{Cullen2018,Lake2016}.  Design constraints and agent goals
-can already be specified via probabilistic programs when given a symbolic
-representation of the underlying design
-space\cite{botvinick2012planning,Yeh:2012:SOW:2185520.2185552,Ritchie:2015:CPM:2809654.2766895}.
-A neuroscientifically-grounded model of motivational control will endow agents with
-a human-like \emph{inductive bias}: learn to survive, and explore what you can
-affect right now.  Opponent control could also potentially be used to encode positive
-feedback loops and pure rewards.
+In published studies, emotional granularity is measured by applying simple covariance metrics to self-reports
+of emotional experience in which study participants rate the intensity of their experiences
+according to a set of emotion adjectives at a given time
+point \cite{10.3389/fnhum.2017.00133}. In contrast, a topic
+model can measure the granularity with which an ideal observer would report emotion experiences and examine the extent to which these categories have some physical basis in autonomic nervous system measurements or even brain activity.
 \end{singlespace}
 
 \begin{singlespace}
-The resulting models of time-varying allostatic set-points can also be checked in
-physiological and neuroimaging studies.  Analyzing simultaneous responses in the
-central and autonomic nervous systems while subjects are challenged can allow us
-to measure the flexibility of mental activity, and we hypothesize this can act as
-a measure of successful opponent control of autonomic systems under time-varying loads.
-These studies will not only provide an opportunity to falsify our current generative
-model of opponent control, but to notice patterns in data which could lead to an
-improved replacement model.
+I chose to use hierarchical Bayesian topic models to study dynamic category construction in
+the predictive mind due to the functional correspondence between the two.  Hierarchical topic
+models follow a history of successful applications to other problems \cite{7783636}.  They
+provide the best fit to studying emotional granularity, out of all machine learning models,
+because they can \emph{discover} nested categories on a person-by-person basis, rather than
+imposing folk-psychological categories not respected by biological and behavioral data \cite{clark2017multivoxel,Gendron2018,Siegel2018}.
+They can also capture how different features lead to different categories
+for each participant, and can describe the \emph{concentration} of data (or nested categories) at every level
+into more or fewer categories.  This will allow us to investigate granularity at multiple levels, within and
+across participants.
+\end{singlespace}
+
+\begin{singlespace}
+I will primarily be guided by Dr. Jan-Willem van de Meent, an expert in probabilistic
+programming \cite{2018arXiv180910756V}.  I am also co-advised by Dr. Lisa Feldman Barrett,
+an internationally recognized psychologist and neuroscientist who discovered emotional
+granularity and who has pioneered the emerging constructionist paradigm for discovering
+the nature of emotion \cite{BarrettTheoryOfConstructed2017}.  I will begin my investigation
+using an existing dataset consisting of subjects' reports of their momentary emotional
+states, and measured physiological endpoint states across several weeks.
+\end{singlespace}
+
+\begin{singlespace}
+My longer-range plan is to build a laboratory studying how the body corrects the brain's
+category construction dynamics.  I hypothesize that the brain, in maintaining allostasis,
+\emph{defends} certain physiological states within narrow ranges
+conducive to survival (and reproduction), via ongoing behavior\cite{Sterling2012}.  Interoceptive
+signals related to defended parameters should show differences from exteroceptive sensory signals, and I will continue the work I begin in my PhD by characterizing these.
 \end{singlespace}
 
 \section*{Broader Impacts}
 \begin{singlespace}
-My PhD appointment at Northeastern University is unique in providing me the resources
-to investigate how the brain maintains the body from a computational perspective. My
-primary adviser Jan-Willem van de Meent and co-adviser Lisa Feldman Barrett are founding
-principal investigators of the Psychologists, Engineers, and Neuroscientists (PEN) group, and
-Professor Barrett is the President of the Association for Psychological Science.
-The PEN group aims precisely to bring engineering and computer-science expertise to bear on
-the study of the brain as an organ of
-allostasis\cite{Kleckner2017}.
-Beyond just implementing a neuroscience-inspired AI idea and testing it in an
-environment such as the OpenAI Gym, I have the opportunity to extrapolate from a
-hypothesis about allostasis to predictions about human and animal subjects, and then
-test those predictions against real studies.  That initial implementation of brain-inspired
-AI has been done and tested\cite{Cullen2018,Penny}.  Now, in the PEN group, I believe we
-can advance most efficiently by subjecting computational ideas to rigorous neuroimaging,
-behavioral, and physiological studies.  A clear idea of how the brain coordinates
-allostasis will not only provide fertile soil for AI investigations: dysfunctional
-allostatic processing is implicated in many of today's most pressing health issues.
-Depression, anxiety, addiction, and obesity can all arise from malfunctions in
-the brain's core allostatic mechanisms\cite{Rosen2004,Stephan2016}.
+Drs. van de Meent and Barrett are founding principal investigators of the Psychologists, Engineers,
+and Neuroscientists (PEN) group, dedicated to building a multidisciplinary understanding of brain
+function as predictive regulation \cite{Sterling2012,Kleckner2017}.  I am in the first cohort of
+PEN's graduate trainees to receive fully multidiscplinary training in applying methods from 
+formal sciences such as computing and Bayesian statistics to address the problems of
+psychological science and neuroscience.  In summer 2018 I assisted psychologist
+colleagues in learning Python and the PsyNeuLink block-modeling framework, and I will also help
+train interested psychologists and neuroscientists at PhD and post-doc levels computational modeling
+techniques.
+\end{singlespace}
+
+\begin{singlespace}
+Since the models I build require reusable software, I am also making a technological
+contribution.  I have presented a library of modeling and inference
+combinators for Probabilistic Torch at the International Conference on Probabilistic Programming
+\cite{Sennesh2018}.
 \end{singlespace}
